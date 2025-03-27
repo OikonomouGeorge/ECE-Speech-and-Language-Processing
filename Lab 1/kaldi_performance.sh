@@ -1,6 +1,6 @@
 . ./path.sh 
 
-cd "data/local/lm_tmp"
+cd "/home/zeno/kaldi/egs/project1/data/local/lm_tmp"
 export IRSTLM=$KALDI_ROOT/tools/irstlm/
 export PATH=${PATH}:$IRSTLM/bin
 
