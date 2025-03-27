@@ -1,0 +1,16 @@
+. ./path.sh # Source of Kaldi
+
+target_dir="/home/zeno/kaldi/egs/project1/data/local/dict"
+lexicon_dir="/home/zeno/kaldi/egs/project1/dataset/usc/lexicon.txt"
+nonsilence_phones_dir="$target_dir/nonsilence_phones.txt"
+
+# Creating data/local/dict folder
+# mkdir -p $target_dir
+# Creating silence_phones.txt, optional_silence.txt
+# echo "sil" > $target_dir/silence_phones.txt
+# echo "sil" > $target_dir/optional_silence.txt
+
+# Creating nonsilence_phones.txt
+# awk '{for (i=2; i<=NF; i++) print $i}' "$lexicon_dir" | \
+#    grep -v '^sil$' | \
+#    sort -u > "$nonsilence_phones_dir"
