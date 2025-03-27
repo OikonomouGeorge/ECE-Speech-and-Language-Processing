@@ -10,9 +10,9 @@
 . ./path.sh || exit 1;
 
 echo "Preparing train, dev and test data"
-lmdir=data/local/nist_lm
-tmpdir=data/local/lm_tmp
-lexicon=data/local/dict/lexicon.txt
+lmdir=/home/zeno/kaldi/egs/project1/data/local/nist_lm
+tmpdir=/home/zeno/kaldi/egs/project1/data/local/lm_tmp
+lexicon=/home/zeno/kaldi/egs/project1/data/local/dict/lexicon.txt
 mkdir -p $tmpdir
 
 # Next, for each type of language model, create the corresponding FST
@@ -21,9 +21,9 @@ mkdir -p $tmpdir
 echo "Preparing language models for test"
 
 for lm_suffix in ug ug_dev ug_test bg bg_dev bg_test; do
-  outlang=data/lang_phones_${lm_suffix}
+  outlang=/home/zeno/kaldi/egs/project1/data//lang_phones_${lm_suffix}
   mkdir -p $outlang
-  cp -r data/lang/* $outlang
+  cp -r /home/zeno/kaldi/egs/project1/data//lang/* $outlang
 
   lm_file="$lmdir/lm_phone_${lm_suffix}.arpa.gz"
 
