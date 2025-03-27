@@ -1,4 +1,4 @@
-
+. ./path.sh
 base_dir="/home/zeno/kaldi/egs/project1/data"
 
 sort $base_dir/train/wav.scp -o $base_dir/train/wav.scp
