@@ -11,3 +11,7 @@ data_dir="/home/zeno/kaldi/egs/project1/data"
 # Train Deltas Usage: steps/train_deltas.sh <num-leaves> <tot-gauss> <data-dir> <lang-dir> <alignment-dir> <exp-dir>
 /home/zeno/kaldi/egs/wsj/s5/steps/train_deltas.sh --cmd "$train_cmd" 2500 15000 \
   $data_dir/train $data_dir/lang $data_dir/kaldi_monophone/mono_ali $data_dir/kaldi_triphone || exit 1;
+
+    # Trigram Graph Creation
+/home/zeno/kaldi/egs/wsj/s5/utils/mkgraph.sh $data_dir/lang \
+  $data_dir/kaldi_triphone $data_dir/kaldi_triphone/graph/trigram || exit 1;
